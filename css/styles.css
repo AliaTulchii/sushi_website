@@ -65,7 +65,7 @@ body {
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
-  transition: background 0.4s; 
+  transition: background .4s; 
 }
 
 h1, h2, h3 {
@@ -87,16 +87,57 @@ img {
 }
 
 /*=============== THEME ===============*/
+.nav__buttons{
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
 
+.change-theme{
+  font-size: 1.25rem;
+  color: var(--title-color);
+  cursor: pointer;
+  transition: color .3s;
+}
 
 /*========== Variables Dark theme ==========*/
 
+body.dark-theme{
+  --first-color: hsl(326, 74%, 78%);
+  --first-color-alt: hsl(322, 80%, 72%);
+  --title-color: hsl(19, 16%, 85%);
+  --text-color: hsl(19, 16%, 65%);
+  --body-color: hsla(129, 18%, 8%, 0.781);
+  --nav-color: hsl(135, 20%, 8%);
+  --container-color:  hsla(133, 21%, 8%, 0.759);
+}
 
 /*========== 
     Color changes in some parts of 
     the website, in light theme
 ==========*/
 
+.dark-theme .bg-header,
+.dark-theme .nav__menu,
+.dark-theme .scrollup{
+  box-shadow: 0 2px 8px hsla(322, 80%, 69%, 0.496);
+}
+
+.dark-theme .popular__card{
+  box-shadow: 0 8px 20px hsla(322, 80%, 69%, 0.496);
+}
+
+.dark-theme .newsletter__content{
+  background-color: var(--container-color);
+}
+
+.dark-theme::-webkit-scrollbar{
+  background-color: hsl(326, 74%, 78%);
+}
+
+.dark-theme::-webkit-scrollbar-thumb{
+  background-color: hsl(322, 53%, 35%);
+}
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
@@ -259,6 +300,9 @@ img {
 
 /* Active link */
 
+.active-link{
+  color: var(--first-color);
+}
 
 /*=============== HOME ===============*/
 
@@ -713,9 +757,30 @@ z-index: -1;
 
 /*=============== SCROLL UP ===============*/
 
+.scrollup{
+  position: fixed;
+  right: 1rem;
+  bottom: -50%;
+  background-color: var(--first-color-alt);
+  box-shadow: 0 4px 12px hsla(314, 24%, 34%, 0.532);
+  display: inline-flex;
+  padding: .35rem;
+  border-radius: 1rem;
+  font-size: 1.1rem;
+  color: #fff;
+  z-index: var(--z-tooltip);
+  transition: bottom .3s, transform .3s, background .4s;
+}
+
+.scrollup:hover{
+  transform: translateY(-.25rem);
+}
 
 /* Show Scroll Up*/
 
+.show-scroll{
+  bottom: 3rem;
+}
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
