@@ -1,0 +1,207 @@
+/*=============== VARIABLES CSS ===============*/
+:root {
+    --header-height: 3.5rem;
+  
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --first-color: hsl(326, 74%, 74%);
+    --first-color-alt: hsl(322, 80%, 69%);
+    --title-color: hsl(19, 16%, 15%);
+    --text-color: hsl(19, 16%, 35%);
+    --text-color-light: hsl(19, 8%, 55%);
+    --body-color: hsla(134, 68%, 77%, 0.781);
+    --nav-color: hsl(134, 68%, 77%);
+    --container-color:  hsla(134, 68%, 77%, 0.759);
+  
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --body-font: "Poppins", sans-serif;
+    --title-font: "Lora", serif;
+    --subtitle-font: "Dancing Script", cursive;
+    --biggest-font-size: 2.25rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+  
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+  
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+  }
+  @media screen and (min-width: 1024px) {
+    :root {
+      --biggest-font-size: 4rem;
+      --h1-font-size: 2.25rem;
+      --h2-font-size: 1.5rem;
+      --h3-font-size: 1.25rem;
+      --normal-font-size: 1rem;
+      --small-font-size: .875rem;
+      --smaller-font-size: .813rem;
+    }
+  }
+
+
+.menu__container{
+    padding-top: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: 250px;
+    justify-content: center;
+    row-gap: 5.5rem;
+  
+    @media screen and (min-width: 767px){
+      grid-template-columns: repeat(2, 250px);
+    }
+  
+    @media screen and (min-width: 1024px) {
+      grid-template-columns: repeat(3, 262px);
+      column-gap: 3.5rem;
+    }
+  }
+  
+  .menu__card{
+    position: relative;
+    background-color: var(--container-color);
+    padding: 7rem 2rem 1.5rem;
+    box-shadow: 0 8px 20px hsla(133, 24%, 34%, 0.816);
+    border-radius: 1rem;
+    text-align: center;
+  
+    @media screen and (min-width: 1024px) {
+      padding: 7.5rem 2rem 2rem;
+      border-radius: 1.5rem;
+    }
+  }
+  
+  .menu__img{
+    width: 220px;
+    position: absolute;
+    inset: 0;
+    top: -2.5rem;
+    margin: 0 auto;
+    transition: transform .4s;
+  
+    @media screen and (min-width: 1024px) {
+      width: 230px;
+    }
+  }
+  
+  .menu__name{
+    font-size: var(--h3-font-size);
+    font-family: var(--title-font);
+    margin-bottom: .25rem;
+  }
+  
+  .menu__description{
+    display: block;
+    font-size: var(--smaller-font-size);
+    margin-bottom: 1rem;
+  }
+
+  .menu__details-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    margin-bottom: 3rem;
+}
+
+  .menu__items{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: .1rem .3rem;
+    background-color: hsla(133, 24%, 34%, 0.816);
+    color: #fff;
+    font-size: var(--h3-font-size);
+    border-radius: 2rem;
+}
+
+.menu__items-control:not(:last-child),
+.menu__items-current{
+    margin-right: .8rem;
+}
+
+.menu__items-control.first{
+    padding-left: 1rem;
+    padding-right: .5rem ;
+    border-bottom-left-radius: 2rem;
+    border-top-left-radius: 2rem;
+    cursor: pointer;
+}
+
+.menu__items-control.second{
+    padding-right: 1rem;
+    padding-left: .5rem;
+    border-bottom-right-radius: 2rem;
+    border-top-right-radius: 2rem;
+    cursor: pointer;
+}
+
+.menu__items-control:hover{
+    background-color: var(--first-color-alt);
+}
+
+.menu__price{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.menu__price-weight{
+    font-size: 12px;
+}
+
+.menu__price-currency{
+    font-family: var(--subtitle-font);
+    font-weight: var(--font-medium);
+    font-size: 32px;
+}
+  
+  /* .popular__price{
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+    color: var(--first-color);
+  } */
+  
+  .menu__button{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--first-color);
+    padding: 8px 6px;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 1.25rem;
+    box-shadow: 0 4px 20px hsla(322, 80%, 69%, 0.496);
+    cursor: pointer;
+    transition: background .3s;
+  
+    @media screen and (min-width: 1024px) {
+      bottom: 2rem;
+    }
+  }
+
+  .menu__button .bag{
+    position: absolute;
+    right: .9rem;
+    margin-left: 1rem;
+  }
+  
+  .menu__button:hover{
+    background-color: var(--first-color-alt);
+  }
+  
+  .menu__card:hover .menu__img{
+    transform: translateY(-.25rem);
+  }

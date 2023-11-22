@@ -6,6 +6,7 @@
         <link rel="shortcut icon" href="./img/home-sushi-title.png" type="image/x-icon">
         <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
         <link rel="stylesheet" href="./css/styles.css">
+        <link rel="stylesheet" href="./css/menu.css">
         <title>Sushi website</title>
     </head>
     <body>
@@ -59,38 +60,38 @@
            
 
             <!--==================== MENU ====================-->
-            <section class="popular section" >
+            <section class="menu section" >
                 <span class="section__subtitle">
                     The Best Delivery
                 </span>
                 <h2 class="section__title">Our Rolls Set</h2>
 
-                <div class="popular__container container grid">
-                    <article class="popular__card">
-                        <img src="./img/rol-1.png" alt="sushi set" class="popular__img">
+                <div class="menu__container container grid">
+                    <article class="menu__card">
+                        <img src="./img/rol-1.png" alt="sushi set" class="menu__img">
                     
-                        <h3 class="popular__name">Cucumber Rolls</h3>
-                        <p><small data-items-in-box class="text-muted">6 шт.</small></p>
+                        <h3 class="menu__name">Cucumber Rolls</h3>
+                        <p><small data-items-in-box class="menu__description">6 pieces</small></p>
                     
-                        <div class="details-wrapper">
-                            <div class="items counter-wrapper">
-                                <div class="items__control" data-action="minus">-</div>
-                                <div class="items__current" data-counter>1</div>
-                                <div class="items__control" data-action="plus">+</div>
+                        <div class="menu__details-wrapper">
+                            <div class="menu__items counter-wrapper">
+                                <div class="menu__items-control first" data-action="minus">-</div>
+                                <div class="menu__items-current" data-counter>1</div>
+                                <div class="menu__items-control second" data-action="plus">+</div>
                             </div>
 
-                            <div class="price">
-                                <div class="price__weight">180г.</div>
-                                <div class="price__currency">300 ₽</div>
+                            <div class="menu__price">
+                                <div class="menu__price-weight">180gr</div>
+                                <div class="menu__price-currency">30 $</div>
                             </div>
                         </div>
 
-                        <button class="popular__button">
-                            <i class="ri-shopping-bag-line"></i>
+                        <button class="menu__button">
+                            add to cart <i class="ri-shopping-bag-line bag"></i>
                         </button>
                     </article>
 
-                    <article class="popular__card">
+                    <!-- <article class="popular__card">
                         <img src="./img/rol-2.png" alt="sushi set" class="popular__img">
                     
                         <h3 class="popular__name">Salmon Maki Rolls</h3>
@@ -192,7 +193,7 @@
                         <button class="popular__button">
                             <i class="ri-shopping-bag-line"></i>
                         </button>
-                    </article>
+                    </article> -->
                 </div>
             </section>
 
@@ -337,5 +338,6 @@
 
         <!--=============== MAIN JS ===============-->
         <script src="./js/main.js"></script>
+        <script src="./js/menu.js"></script>
     </body>
 </html>
