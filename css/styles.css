@@ -148,7 +148,7 @@ body.dark-theme{
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   
-  max-width: 1024px;
+  max-width: 1200px;
   margin-inline: 1.5rem;
 
   @media screen and (max-width: 340px) {

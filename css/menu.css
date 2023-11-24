@@ -48,9 +48,31 @@
 
 
 .menu__container{
+    padding: 1rem ;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-around;
+    column-gap: 5rem;
+    /* grid-template-columns: 250px; */
+    /* justify-content: center;
+    row-gap: 5.5rem;
+  
+    @media screen and (min-width: 767px){
+      grid-template-columns: repeat(2, 250px);
+    }
+  
+    @media screen and (min-width: 1024px) {
+      grid-template-columns: repeat(2, 262px);
+      column-gap: 3.5rem;
+    } */
+  }
+
+  .menu__cards-container{
     padding-top: 4rem;
     margin-left: auto;
     margin-right: auto;
+    display: grid;
     grid-template-columns: 250px;
     justify-content: center;
     row-gap: 5.5rem;
@@ -60,7 +82,7 @@
     }
   
     @media screen and (min-width: 1024px) {
-      grid-template-columns: repeat(3, 262px);
+      grid-template-columns: repeat(2, 262px);
       column-gap: 3.5rem;
     }
   }
@@ -74,7 +96,7 @@
     text-align: center;
   
     @media screen and (min-width: 1024px) {
-      padding: 7.5rem 2rem 2rem;
+      padding: 7rem 1.5rem 2rem;
       border-radius: 1.5rem;
     }
   }
@@ -106,7 +128,7 @@
 
   .menu__details-wrapper{
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
     height: 100px;
     margin-bottom: 3rem;
@@ -117,6 +139,7 @@
     align-items: center;
     height: 40px;
     padding: .1rem .3rem;
+    margin-right: 2rem;
     background-color: hsla(133, 24%, 34%, 0.816);
     color: #fff;
     font-size: var(--h3-font-size);
@@ -125,7 +148,7 @@
 
 .menu__items-control:not(:last-child),
 .menu__items-current{
-    margin-right: .8rem;
+    margin-right: .4rem;
 }
 
 .menu__items-control.first{
@@ -161,7 +184,7 @@
 .menu__price-currency{
     font-family: var(--subtitle-font);
     font-weight: var(--font-medium);
-    font-size: 32px;
+    font-size: 28px;
 }
   
   /* .popular__price{
@@ -205,3 +228,144 @@
   .menu__card:hover .menu__img{
     transform: translateY(-.25rem);
   }
+
+
+  /*--------- orders ---------*/
+
+  .menu__orders-container{
+    position: relative;
+    width: 400px;
+    background-color: hsla(133, 24%, 34%, 0.816);
+    border-radius: 2.5rem;
+    padding: 1rem 1.5rem;
+    color: #fff;
+    overflow: hidden;
+  }
+
+  .menu__orders-title{
+    font-family: var(--subtitle-font);
+    font-size: var(--h1-font-size);
+    color: var(--first-color);
+    margin-bottom: 1rem;
+  }
+
+  .menu__orders-alert{
+    background-color: var(--body-color);
+    padding: .2rem .5rem;
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+  }
+
+  .menu__orders-item--top{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .menu__orders-item--img img{
+    width: 120px;
+    padding: .5rem;
+    background-color: #ffffff6d;
+    border-radius: 1rem;
+  }
+
+  .menu__orders-item--title,
+  .menu__orders-total--title,
+  .menu__order-form--title{
+    font-weight: var(--font-semi-bold);
+    font-size: 20px;
+    margin-bottom: 1rem;
+  }
+
+  .menu__orders-item--weight{
+    font-size: 12px;
+    margin-bottom: 1rem;
+  }
+
+  .menu__orders-item--details{
+    display: flex;
+    margin-bottom: 1rem;
+  }
+
+  .menu__orders-items{
+    display: flex;
+    align-items: center;
+    height: 20px;
+    padding: 1rem .4rem;
+    margin-right: 1rem;
+    background-color: var(--body-color);
+    color: #fff;
+    font-size: var(--h3-font-size);
+    border-radius: 2rem;
+}
+
+.menu__orders-items--control:not(:last-child),
+.menu__orders-items--current{
+    margin-right: .8rem;
+}
+
+.menu__orders-items--control.first{
+ 
+    padding-left: .5rem ;
+    padding-right: .1rem ;
+    cursor: pointer;
+}
+
+.menu__orders-items--control.second{
+    padding-right: .5rem;
+    padding-left: .1rem;
+    cursor: pointer;
+}
+
+.menu__orders-items--control:hover{
+  color: var(--first-color-alt);
+}
+
+.menu__orders-price--currency{
+  font-family: var(--subtitle-font);
+  font-weight: var(--font-medium);
+  color: var(--first-color);
+  font-size: 32px;
+}
+
+.line{
+  height: 2px;
+  background-color: var(--body-color);
+  margin-bottom: 1rem;
+}
+
+.menu__orders-total{
+  margin-bottom: 1rem;
+}
+
+.menu__orders-total--cost{
+  color: var(--body-color);
+  font-size: 20px;
+  margin-left: .5rem;
+}
+
+.menu__orders-total--price,
+.menu__orders-total--rouble{ 
+  color: var(--first-color);
+  font-size: 20px;
+  font-family: var(--subtitle-font);
+}
+
+.menu__orders-total--price{
+  margin-left: .5rem;
+}
+
+.menu__order-form--control{
+  color: var(--text-color);
+    width: initial;
+    padding: .8rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4rem;
+    border: none;
+    outline: none;
+}
+
+.menu__order-form--btn{
+  padding: .5rem 1rem;
+  border: none;
+  outline: none;
+}

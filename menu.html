@@ -67,29 +67,114 @@
                 <h2 class="section__title">Our Rolls Set</h2>
 
                 <div class="menu__container container grid">
-                    <article class="menu__card">
-                        <img src="./img/rol-1.png" alt="sushi set" class="menu__img">
-                    
-                        <h3 class="menu__name">Cucumber Rolls</h3>
-                        <p><small data-items-in-box class="menu__description">6 pieces</small></p>
-                    
-                        <div class="menu__details-wrapper">
-                            <div class="menu__items counter-wrapper">
-                                <div class="menu__items-control first" data-action="minus">-</div>
-                                <div class="menu__items-current" data-counter>1</div>
-                                <div class="menu__items-control second" data-action="plus">+</div>
-                            </div>
 
-                            <div class="menu__price">
-                                <div class="menu__price-weight">180gr</div>
-                                <div class="menu__price-currency">30 $</div>
+                    <div class="menu__cards-container">
+                        <article class="menu__card">
+                            <img src="./img/rol-1.png" alt="sushi set" class="menu__img">
+                        
+                            <h3 class="menu__name">Cucumber Rolls</h3>
+                            <p><small data-items-in-box class="menu__description">6 pieces</small></p>
+                        
+                            <div class="menu__details-wrapper">
+                                <div class="menu__items counter-wrapper">
+                                    <div class="menu__items-control first" data-action="minus">-</div>
+                                    <div class="menu__items-current" data-counter>1</div>
+                                    <div class="menu__items-control second" data-action="plus">+</div>
+                                </div>
+    
+                                <div class="menu__price">
+                                    <div class="menu__price-weight">180gr</div>
+                                    <div class="menu__price-currency">30 $</div>
+                                </div>
                             </div>
+    
+                            <button class="menu__button">
+                                add to cart <i class="ri-shopping-bag-line bag"></i>
+                            </button>
+                        </article>
+
+                        <article class="menu__card">
+                            <img src="./img/rol-2.png" alt="sushi set" class="menu__img">
+                        
+                            <h3 class="menu__name">Cucumber Rolls</h3>
+                            <p><small data-items-in-box class="menu__description">6 pieces</small></p>
+                        
+                            <div class="menu__details-wrapper">
+                                <div class="menu__items counter-wrapper">
+                                    <div class="menu__items-control first" data-action="minus">-</div>
+                                    <div class="menu__items-current" data-counter>1</div>
+                                    <div class="menu__items-control second" data-action="plus">+</div>
+                                </div>
+    
+                                <div class="menu__price">
+                                    <div class="menu__price-weight">220gr</div>
+                                    <div class="menu__price-currency">45 $</div>
+                                </div>
+                            </div>
+    
+                            <button class="menu__button">
+                                add to cart <i class="ri-shopping-bag-line bag"></i>
+                            </button>
+                        </article>
+                    </div>
+
+
+                    <div class="menu__orders-container">
+					<div class="menu__orders-body">
+						<h5 class="menu__orders-title">Your order</h4>
+						<div data-cart-empty class="menu__orders-alert alert-secondary" role="alert">
+							The basket is empty
+						</div>
+						
+						<div class="menu__orders-wrapper">
+
+							
+							<div class="menu__orders-item" data-id="02">
+								<div class="menu__orders-item--top">
+									<div class="menu__orders-item--img">
+										<img src="./img/rol-1.png" alt="cucumber roll">
+									</div>
+									<div class="menu__orders-item--desc">
+										<div class="menu__orders-item--title">Cucumber Rolls</div>
+										<div class="menu__orders-item--weight">6 pieces / 205gr.</div>
+
+										
+										<div class="menu__orders-item--details">
+
+											<div class="menu__orders-items items--small counter-wrapper">
+												<div class="menu__orders-items--control first" data-action="minus">-</div>
+												<div class="menu__orders-items--current" data-counter="">1</div>
+												<div class="menu__orders-items--control second" data-action="plus">+</div>
+											</div>
+
+											<div class="menu__orders-price">
+												<div class="menu__orders-price--currency">25 $</div>
+											</div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+                        
+                        <div class="line"></div>
+						
+						<div class="menu__orders-total">
+							<p><span class="menu__orders-total--title">Delivery:</span> <span class="menu__orders-total--cost free">For free</span> </p>
+							<p><span class="menu__orders-total--title">Total:</span> <span class="menu__orders-total--price">33</span> <span class="menu__orders-total--rouble">$</span></p>
+						</div>
+
+                        <div class="line"></div>
+
+                        <div id="order-form" class="menu__order-form card-body ">
+                            <h5 class="menu__order-form--title">Make an order</h4>
+                            <form>
+                                <div class="menu__order-form--group">
+                                    <input type="text" class="menu__order-form--control" placeholder="Your phone number">
+                                </div>
+                                <button type="submit" class="menu__order-form--btn button">Order</button>
+                            </form>
                         </div>
-
-                        <button class="menu__button">
-                            add to cart <i class="ri-shopping-bag-line bag"></i>
-                        </button>
-                    </article>
 
                     <!-- <article class="popular__card">
                         <img src="./img/rol-2.png" alt="sushi set" class="popular__img">
@@ -194,6 +279,8 @@
                             <i class="ri-shopping-bag-line"></i>
                         </button>
                     </article> -->
+                    </div>
+                    </div>
                 </div>
             </section>
 
