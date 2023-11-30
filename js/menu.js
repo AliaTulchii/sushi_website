@@ -14,7 +14,7 @@ window.addEventListener('click', (e) => {
         counter.innerText = ++counter.innerText
 
         if (e.target.closest('.cart-wrapper') ) {
-            calcCartPrice()
+            calcCartPriceAndDelivery()
         }
     } 
 
@@ -28,18 +28,15 @@ window.addEventListener('click', (e) => {
             e.target.closest('.cart-item').remove()
 
             toggleCartStatus()
-            calcCartPrice()
+            calcCartPriceAndDelivery()
         }
 
         if (e.target.closest('.cart-wrapper') ) {
-            calcCartPrice()
+            calcCartPriceAndDelivery()
         }
 
     }
 
-    if (e.target.hasAttribute('[data-action]') && e.target.closest('.cart-wrapper')) {
-        calcCartPrice()
-    }
 
 })
 
@@ -55,8 +52,8 @@ window.addEventListener('click', (e) => {
 
         const productInfo = {
             id: card.dataset.id,
-            imgSrc: card.querySelector('.product-img').getAttribute('src'),
-            title: card.querySelector('.item-title').innerText,
+            imgSrc: card.querySelector('.menu__product-img').getAttribute('src'),
+            title: card.querySelector('.menu__product-title').innerText,
             itemsInBox: card.querySelector('[data-items-in-box]').innerText,
             weight: card.querySelector('.price__weight').innerText,
             price: card.querySelector('.price__currency').innerText,
@@ -79,13 +76,13 @@ window.addEventListener('click', (e) => {
                     <div class="cart-item__title">${productInfo.title}</div>
                     <div class="cart-item__weight">${productInfo.itemsInBox} / ${productInfo.weight}</div>
 
-                    <!-- cart-item__details -->
+                    
                     <div class="cart-item__details">
 
-                        <div class="items items--small counter-wrapper">
-                            <div class="items__control" data-action="minus">-</div>
-                            <div class="items__current" data-counter="">${productInfo.counter}</div>
-                            <div class="items__control" data-action="plus">+</div>
+                        <div class="menu__cart-items counter-wrapper">
+                            <div class="cart-item__control first" data-action="minus">-</div>
+                            <div class="cart-item__current" data-counter="">${productInfo.counter}</div>
+                            <div class="cart-item__control second" data-action="plus">+</div>
                         </div>
 
                         <div class="price">
@@ -93,7 +90,7 @@ window.addEventListener('click', (e) => {
                         </div>
 
                     </div>
-                    <!-- // cart-item__details -->
+                    
 
                 </div>
             </div>
@@ -107,7 +104,7 @@ window.addEventListener('click', (e) => {
 
         toggleCartStatus();
 
-        calcCartPrice();
+        calcCartPriceAndDelivery();
     }
 })
 
@@ -130,10 +127,14 @@ function toggleCartStatus() {
 
 
 //--------------------CALCULATE CART PRICE------------------//
-function calcCartPrice() {
+function calcCartPriceAndDelivery() {
     const cartWrapper = document.querySelector('.cart-wrapper')
     const priceEl = cartWrapper.querySelectorAll('.price__currency')
     const priceTotalEl = document.querySelector('.total-price')
+    const deliveryCost = document.querySelector('.delivery-cost')
+    const deliveryCart = document.querySelector('[data-cart-delivery]')
+    
+
 
     let totalPrice = 0
 
@@ -143,5 +144,19 @@ function calcCartPrice() {
         totalPrice += parseInt(item.innerText) * parseInt(amountEl.innerText)
     })
         
-    priceTotalEl.innerText = totalPrice    
+    priceTotalEl.innerText = totalPrice 
+    
+    if (totalPrice > 0) {
+        deliveryCart.classList.remove('none')
+    } else {
+        deliveryCart.classList.add('none')
+    }
+
+    if (totalPrice >= 50) {
+        deliveryCost.classList.add('.free');
+        deliveryCost.innerText = 'Free delivery'
+    } else {
+        deliveryCost.classList.remove('.free');
+        deliveryCost.innerText = '3$'
+    }
 }
