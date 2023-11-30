@@ -1,11 +1,8 @@
 const productsContainer = document.querySelector("#products-container");
 
-
 getProducts();
-
-
 async function getProducts() {
-  const response = await fetch("./products.json");
+  const response = await fetch("./js/products.json");
   console.log(response);
 
   const productsArray = await response.json();
@@ -16,8 +13,8 @@ async function getProducts() {
 
 
 
-function renderProducts(arrayProducts) {
-  arrayProducts.forEach((item) => {
+function renderProducts(productsArray) {
+    productsArray.forEach((item) => {
     const productHTML = `
                             <div class="menu__card">
                                 <div class="card " data-id="${item.id}">
