@@ -1,262 +1,260 @@
 <!DOCTYPE html>
-    <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./img/home-sushi-title.png" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="./css/menu.css">
-    <title>Sushi website</title>
-</head>
-
-<body>
-    <header class="header" id="header">
-        <nav class="nav container">
-            <a href="#home" class="nav__logo">
-                <img src="./img/home-sushi-title.png" alt="logo image">
-                Sushi
-            </a>
-
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="./index.html" class="nav__link ">Home</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="./menu.html" class="nav__link active-link">Menu</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#recently" class="nav__link"></a>
-                    </li>
-                </ul>
-
-                <div class="nav__close" id="nav-close">
-                    <i class="ri-close-line"></i>
-                </div>
-
-                <img src="./img/leaf-2.png" alt="flower" class="nav__img-1">
-                <img src="./img/leaf-1.png" alt="flower" class="nav__img-2">
-
-            </div>
-
-            <div class="nav__buttons">
-                <i class="ri-moon-clear-line change-theme" id="theme-button"></i>
-
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class="ri-apps-line"></i>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <!--==================== MAIN ====================-->
-    <main>
-
-
-        <!--==================== MENU ====================-->
-
-
-        <div class="container">
-            <div class="menu__container">
-                
-                <div class="menu__products-container">
-                    <div class="menu__product-container" id="products-container">
-                    </div>
-                </div>
-
-
-                <div class="menu__cart-container">
-
-                    <div class="card ">
-                        <div class="card__body">
-                            <h5 class="card__title">Your order</h4>
-                                <div data-cart-empty class="alert card__alert" role="alert">
-                                    Basket is empty
-                                </div>
-
-                                <div class="cart-wrapper">
-                                </div>
-
-                                <div class="cart-total">
-                                    <p data-cart-delivery class="none">
-                                        <span class="cart-total__title">Delivery:</span>
-                                        <span class="delivery-cost cart-total__cost">3$</span>
-                                        <br>
-                                        <span class="small">Free when you make an order over 600 rub</span>
-                                    </p>
-                                    <p>
-                                        <span class="cart-total__title">Summary:</span>
-                                        <span class="total-price cart-total__price">0</span> <span class="cart-total__price">$</span>
-                                    </p>
-                                </div>
-
-
-                        </div>
-
-
-                        <div id="order-form" class="card-body border-top none">
-                            <h5 class="cart-total__title">Make an order</h4>
-                                <form>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Your phone number">
-                                    </div>
-                                    <button type="submit" class="form__btn">Order</button>
-                                </form>
-                        </div>
-
-
-                    </div>
-
-
-
-                </div>
-            </div>
-        </div>
-
-
-    </main>
-
-    <!--==================== FOOTER ====================-->
-    <footer class="footer">
-        <div class="footer__container container grid">
-            <div>
-                <a href="#home" class="footer__logo">
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="./img/home-sushi-title.png" type="image/x-icon">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        <link rel="stylesheet" href="./css/styles.css">
+        <link rel="stylesheet" href="./css/menu.css">
+        <title>Sushi website</title>
+    </head>
+    
+    <body>
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#home" class="nav__logo">
                     <img src="./img/home-sushi-title.png" alt="logo image">
                     Sushi
                 </a>
-
-                <p class="footer__description">
-                    Food for the body is not <br>
-                    enough. There must be food <br>
-                    for the soul.
-                </p>
-            </div>
-
-            <div class="footer__content">
-                <div>
-                    <h3 class="footer__title">
-                        Main Menu
-                    </h3>
-
-                    <ul class="footer__links">
-                        <li>
-                            <a href="#" class="footer__link">
-                                About
-                            </a>
+    
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="./index.html" class="nav__link ">Home</a>
                         </li>
-                        <li>
-                            <a href="#" class="footer__link">
-                                Menus
-                            </a>
+                        <li class="nav__item">
+                            <a href="./menu.html" class="nav__link active-link">Menu</a>
                         </li>
-                        <li>
-                            <a href="#" class="footer__link">
-                                Offer
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="footer__link">
-                                Events
-                            </a>
+                        <li class="nav__item">
+                            <a href="#recently" class="nav__link"></a>
                         </li>
                     </ul>
+    
+                    <div class="nav__close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+    
+                    <img src="./img/leaf-2.png" alt="flower" class="nav__img-1">
+                    <img src="./img/leaf-1.png" alt="flower" class="nav__img-2">
+    
                 </div>
-
-                <div>
-                    <h3 class="footer__title">
-                        Information
-                    </h3>
-
-                    <ul class="footer__links">
-                        <li>
-                            <a href="#" class="footer__link">
-                                Contact
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="footer__link">
-                                Order & Returns
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="footer__link">
-                                Videos
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="footer__link">
-                                Reservation
-                            </a>
-                        </li>
-                    </ul>
+    
+                <div class="nav__buttons">
+                    <i class="ri-moon-clear-line change-theme" id="theme-button"></i>
+    
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="ri-apps-line"></i>
+                    </div>
                 </div>
-
-                <div>
-                    <h3 class="footer__title">
-                        Address
-                    </h3>
-
-                    <ul class="footer__links">
-                        <li class="footer__information">
-                            Av. Hacienda 1234 <br>
-                            Lima 4321, Perú
-                        </li>
-                        <li class="footer__information">
-                            9AM - 11PM
-                        </li>
-
-                    </ul>
-                </div>
-
-                <div>
-                    <h3 class="footer__title">
-                        Social Media
-                    </h3>
-
-                    <ul class="footer__social">
-                        <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
-                            <i class="ri-facebook-circle-fill"></i>
-                        </a>
-                        <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
-                            <i class="ri-instagram-fill"></i>
-                        </a>
-                        <a href="https://twitter.com/" target="_blank" class="footer__social-link">
-                            <i class="ri-twitter-fill"></i>
-                        </a>
-                    </ul>
+            </nav>
+        </header>
+    
+        <!--==================== MAIN ====================-->
+        <main>
+    
+    
+            <!--==================== MENU ====================-->
+    
+    
+            <div class="container">
+                <div class="menu__container">
+                    
+                    <div class="menu__products-container">
+                        <div class="menu__product-container" id="products-container">
+                        </div>
+                    </div>
+    
+    
+                    <div class="menu__cart-container">
+    
+                        <div class="card ">
+                            <div class="card__body">
+                                <h5 class="card__title">Your order</h4>
+                                    <div data-cart-empty class="alert card__alert" role="alert">
+                                        Basket is empty
+                                    </div>
+    
+                                    <div class="cart-wrapper">
+                                    </div>
+    
+                                    <div class="cart-total">
+                                        <p data-cart-delivery class="none">
+                                            <span class="cart-total__title">Delivery:</span>
+                                            <span class="delivery-cost cart-total__cost">3$</span>
+                                            <br>
+                                            <span class="small">Free when you make an order over 600 rub</span>
+                                        </p>
+                                        <p>
+                                            <span class="cart-total__title">Summary:</span>
+                                            <span class="total-price cart-total__price">0</span> <span class="cart-total__price">$</span>
+                                        </p>
+                                    </div>
+    
+    
+                            </div>
+    
+    
+                            <div id="order-form" class="card-body border-top none">
+                                <h5 class="cart-total__title">Make an order</h4>
+                                    <form>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Your phone number">
+                                        </div>
+                                        <button type="submit" class="form__btn">Order</button>
+                                    </form>
+                            </div>
+    
+    
+                        </div>
+    
+    
+    
+                    </div>
                 </div>
             </div>
-            <img src="./img/leaf-2.png" alt="leaf" class="footer__leaf">
-        </div>
-
-        <div class="footer__info container">
-            <div class="footer__card">
-                <img src="./img/footer-card-1.png" alt="" class="">
-                <img src="./img/footer-card-2.png" alt="" class="">
-                <img src="./img/footer-card-3.png" alt="" class="">
-                <img src="./img/footer-card-4.png" alt="" class="">
+    
+    
+        </main>
+    
+        <!--==================== FOOTER ====================-->
+        <footer class="footer">
+            <div class="footer__container container grid">
+                <div>
+                    <a href="#home" class="footer__logo">
+                        <img src="./img/home-sushi-title.png" alt="logo image">
+                        Sushi
+                    </a>
+    
+                    <p class="footer__description">
+                        Food for the body is not <br>
+                        enough. There must be food <br>
+                        for the soul.
+                    </p>
+                </div>
+    
+                <div class="footer__content">
+                    <div>
+                        <h3 class="footer__title">
+                            Main Menu
+                        </h3>
+    
+                        <ul class="footer__links">
+                            <li>
+                                <a href="#" class="footer__link">
+                                    About
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__link">
+                                    Menus
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__link">
+                                    Offer
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__link">
+                                    Events
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div>
+                        <h3 class="footer__title">
+                            Information
+                        </h3>
+    
+                        <ul class="footer__links">
+                            <li>
+                                <a href="#" class="footer__link">
+                                    Contact
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__link">
+                                    Order & Returns
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__link">
+                                    Videos
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__link">
+                                    Reservation
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div>
+                        <h3 class="footer__title">
+                            Address
+                        </h3>
+    
+                        <ul class="footer__links">
+                            <li class="footer__information">
+                                Av. Hacienda 1234 <br>
+                                Lima 4321, Perú
+                            </li>
+                            <li class="footer__information">
+                                9AM - 11PM
+                            </li>
+    
+                        </ul>
+                    </div>
+    
+                    <div>
+                        <h3 class="footer__title">
+                            Social Media
+                        </h3>
+    
+                        <ul class="footer__social">
+                            <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+                                <i class="ri-facebook-circle-fill"></i>
+                            </a>
+                            <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+                                <i class="ri-instagram-fill"></i>
+                            </a>
+                            <a href="https://twitter.com/" target="_blank" class="footer__social-link">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <img src="./img/leaf-2.png" alt="leaf" class="footer__leaf">
             </div>
-
-            <span class="footer__copy">
-                &#169; Copyright Bedimcode. All rights reserved
-            </span>
-        </div>
-    </footer>
-
-    <!--========== SCROLL UP ==========-->
-
-    <a href="#" class="scrollup" id="scroll-up">
-        <i class="ri-arrow-up-s-line"></i>
-    </a>
-
-
-
-    <!--=============== MAIN JS ===============-->
-    <script src="./js/renderProducts.js"></script>
-    <script src="./js/main.js"></script>
-    <script src="./js/menu.js"></script>
-</body>
-
+    
+            <div class="footer__info container">
+                <div class="footer__card">
+                    <img src="./img/footer-card-1.png" alt="" class="">
+                    <img src="./img/footer-card-2.png" alt="" class="">
+                    <img src="./img/footer-card-3.png" alt="" class="">
+                    <img src="./img/footer-card-4.png" alt="" class="">
+                </div>
+    
+                <span class="footer__copy">
+                    &#169; Copyright Bedimcode. All rights reserved
+                </span>
+            </div>
+        </footer>
+    
+        <!--========== SCROLL UP ==========-->
+    
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="ri-arrow-up-s-line"></i>
+        </a>
+    
+    
+    
+        <!--=============== MAIN JS ===============-->
+        <script src="./js/renderProducts.js"></script>
+        <script src="./js/main.js"></script>
+        <script src="./js/menu.js"></script>
+    </body>
 </html>
