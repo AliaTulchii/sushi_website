@@ -5,7 +5,7 @@ getProducts();
 
 
 async function getProducts() {
-  const response = await fetch("../products.json");
+  const response = await fetch("./products.json");
   console.log(response);
 
   const productsArray = await response.json();
