@@ -91,12 +91,108 @@
 	}
   }
 
+  .section__title {
+    font-size: 44px;
+    font-family: var(--title-font);
+    margin-bottom: 4rem;
+    margin-top: 8rem;
+  }
+
+  .wrapper{
+    width: 60%;
+    margin: 0 auto 4rem auto;
+   
+  }
+
+  .search__container{
+     margin: 1em 0;
+     display: flex;
+    background-color: #ffffff76;
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+    }
+
+    .search__container input {
+      background-color: transparent;
+      width: 90%;
+      font-size: var(--h2-font-size);
+      color: var(--first-color-alt);
+     border: none;
+     border-radius: 2rem;
+     outline: none;
+     padding: 1.5rem .8rem 1.5rem 2rem;
+    }
+
+    .search__container input::placeholder{
+      font-size: var(--h2-font-size);
+      color: #39a352c7;
+    }
+
+    .search__btn{
+      width: 10%;
+      margin-left: auto;
+      background-color: var(--first-color);
+      padding: 8px;
+      border-radius: 50%;
+      border: none;
+      outline: none;
+      color: #fff;
+      font-size: 1.25rem;
+      box-shadow: 0 4px 20px hsla(322, 80%, 69%, 0.496);
+      cursor: pointer;
+      transition: background .3s;
+    
+      @media screen and (min-width: 1024px) {
+        bottom: 2rem;
+      }
+    }
+
+    .search__btn .ri-search-eye-line{
+      font-size:32px;
+      
+    }
+
+    .search__buttons{
+      width: 90%;
+      display: flex;
+    }
+
+
+    .search__buttons button{
+      width: 20%;
+      margin-left: auto;
+      background-color: #ed8cc3af;
+      padding: 8px;
+      border-radius: 2rem;
+      border: none;
+      outline: none;
+      color: #fff;
+      font-size: 1.25rem;
+      box-shadow: 0 4px 20px hsla(322, 80%, 69%, 0.496);
+      cursor: pointer;
+      transition: background .3s;
+    
+      @media screen and (min-width: 1024px) {
+        bottom: 2rem;
+      }
+    }
+
+    .search__buttons button:hover,
+    .active{
+      background-color: var(--first-color-alt);
+    }
+
+
+
   .menu__container{
     padding: 1rem ;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     column-gap: 3rem;
   }
+
+
 
   .menu__box-main{
 	display: flex;
@@ -106,8 +202,8 @@
 
 
   .menu__product-container{
-	margin-top: 8rem;
-	padding-top: 4rem;
+	/* margin-top: 8rem; */
+	/* padding-top: 4rem; */
     display: grid;
     grid-template-columns: 250px;
     justify-content:flex-start;
@@ -121,6 +217,10 @@
       grid-template-columns: repeat(2, 300px);
       column-gap: 3.5rem;
     }
+  }
+
+  .menu__product-container.dishes{
+    /* margin-bottom: 50px; */
   }
 
   .menu__card{
@@ -293,7 +393,6 @@
     position: relative;
     width: 400px;
     height: 100%;
-	margin-top: 10rem;
     background-color: hsla(133, 24%, 34%, 0.816);
     border-radius: 2.5rem;
     padding: 1rem 1.5rem;

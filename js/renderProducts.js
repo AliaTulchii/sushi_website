@@ -1,8 +1,8 @@
-const productsContainer = document.querySelector("#products-container");
+const productsRollsContainer = document.querySelector("#products-rolls-container");
 
 getProducts();
 async function getProducts() {
-  const response = await fetch("./js/products.json");
+  const response = await fetch("./js/productsRolls.json");
   console.log(response);
 
   const productsArray = await response.json();
@@ -45,6 +45,6 @@ function renderProducts(productsArray) {
                             </div>
         `;
       
-      productsContainer.insertAdjacentHTML('beforeend', productHTML)
+        productsRollsContainer.insertAdjacentHTML('beforeend', productHTML)
   });
 }

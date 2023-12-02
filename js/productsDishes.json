@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "title": "Onigiri",
+        "itemsInBox": "4 pieces",
+        "weight": "180 gr",
+        "price": "25 $",
+        "imgSrc": "./img/popular-onigiri.png"
+    },
+
+    {
+        "id": 2,
+        "title": "Spring Rolls",
+        "itemsInBox": "4 pieces",
+        "weight": "200 gr",
+        "price": "19.99 $",
+        "imgSrc": "./img/popular-spring-rols.png"
+    },
+
+    {
+        "id": 3,
+        "title": "Sushi Rolls",
+        "itemsInBox": "6 pieces",
+        "weight": "200 gr",
+        "price": "19.99 $",
+        "imgSrc": "./img/popular-sushi-rolls.png"
+    },
+
+    {
+        "id": 4,
+        "title": "Sushi Samurai",
+        "itemsInBox": "3 pieces",
+        "weight": "190 gr",
+        "price": "15.99 $",
+        "imgSrc": "./img/recently-salmon-sushi.png"
+    }
+]

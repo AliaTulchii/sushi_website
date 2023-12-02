@@ -58,12 +58,45 @@
     
     
             <div class="container">
+                <h2 class="section__title">The Best Food</h2> 
+
+                <div class="search wrapper">
+                    <div class="search__container" id="search-container">
+                        <input type="search"
+                        class="search__input"
+                        id="search-input"
+                        placeholder="Search your favorite dishes..."
+                        >
+                        <button class="search__btn" id="search">
+                            <i class="ri-search-line"></i>
+                        </button>
+                    </div>
+                    <div class="search__buttons" id="buttons">
+                        <button class="button-value">All</button>
+                        <button class="button-value">Japanese dishes</button>
+                        <button class="button-value">Rolls set</button>
+                    </div>
+                </div>
+
                 <div class="menu__container">
-                    
-                    <div class="menu__products-container">
-                        <div class="menu__product-container" id="products-container">
+                    <div class="menu__products-container" >
+                        <!-- <span class="section__subtitle">
+                            The Best Food
+                        </span>
+                        <h2 class="section__title">The Best Food</h2> -->
+        
+                        <div class="menu__product-container dishes" id="products-dishes-container">
+                            
+                        </div>
+
+                        <div class="menu__product-container rolls" id="products-rolls-container">
                         </div>
                     </div>
+
+                    <!-- <div class="menu__products-container">
+                        
+                        
+                    </div> -->
     
     
                     <div class="menu__cart-container">
@@ -111,6 +144,8 @@
     
     
                     </div>
+
+                    
                 </div>
             </div>
     
@@ -253,6 +288,7 @@
     
     
         <!--=============== MAIN JS ===============-->
+        <script src="./js/renderDishes.js"></script>
         <script src="./js/renderProducts.js"></script>
         <script src="./js/main.js"></script>
         <script src="./js/menu.js"></script>
